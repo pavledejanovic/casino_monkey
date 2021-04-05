@@ -1,0 +1,74 @@
+$num-sparkles: 30;
+
+@keyframes sparkling {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+.sparkles {
+	background-color: #102;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	i {
+		animation-duration: 6s;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
+		animation-name: sparkling;
+		background: #fff;
+		background-size: contain;
+		border-radius: 50%;
+		box-shadow: 0 0 3px 0.5px rgb(78, 78, 26);
+		display: inline-block;
+		height: 1px;
+		margin: 0;
+		position: absolute;
+		transform: translate3d(-50%, -50%, 0);
+		width: 0.5px;
+
+		&:nth-child(2n) {
+			height: 5px;
+			width: 5px;
+		}
+
+		&:nth-child(3n) {
+			height: 3px;
+			width: 3px;
+		}
+
+		&:nth-child(4n) {
+			height: 2px;
+			width: 2px;
+		}
+		&:nth-child(5n) {
+			height: 4px;
+			width: 4px;
+		}
+	}
+
+	@for $i from 2 through $num-sparkles {
+		i:nth-child(#{$i}) {
+			top: calc(#{random(100)} * 1%);
+			left: calc(#{random(100)} * 1%);
+			animation-delay: 1s * ($i % 10);
+		}
+	}
+}

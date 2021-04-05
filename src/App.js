@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { createContext, useContext, useReducer } from "react";
+import Register from "./components/Register/Register";
+import BackgroundAnimation from "./components/BackgroundAnimation/BackgroundAnimation";
+import { LanguageProvider } from "./contexts/LanguageProvider";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			{/* <LanguageProvider> */}
+			<BackgroundAnimation />
+			<Register />
+			{/* </LanguageProvider> */}
+		</>
+	);
 }
 
 export default App;

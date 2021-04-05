@@ -1,0 +1,81 @@
+@keyframes appearing {
+	0% {
+		opacity: 0;
+	}
+
+	15% {
+		opacity: 0.15;
+	}
+
+	40% {
+		opacity: 0.3;
+	}
+	60% {
+		opacity: 0.45;
+	}
+
+	80% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 0.75;
+	}
+}
+
+.imageContainer {
+	width: 15%;
+	height: 15%;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+
+.tickImage {
+	width: 100%;
+	height: 100%;
+}
+
+.successTab {
+	// background-color: #6d7993;
+	background: linear-gradient(to right, #0c00b075, #0056db);
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	animation-name: appearing;
+	animation-duration: 1s;
+	opacity: 0.9;
+	animation-fill-mode: both;
+	border-radius: 5px;
+	text-align: center;
+	padding: 2rem 0rem;
+}
+
+.line {
+	overflow: visible; /* For IE */
+	padding: 0;
+	border: none;
+	border-top: medium double #333;
+	color: #ffff;
+	text-align: center;
+	width: 75%;
+}
+
+.line:after {
+	content: "§";
+	display: inline-block;
+	position: relative;
+	top: -0.7em;
+	font-size: 1.5em;
+	padding: 0 0.25em;
+	background: #0c00b075;
+	opacity: 0.9;
+}
+
+.fMessage {
+	font-family: Niconne;
+	color: white;
+}
+
+.sMessage {
+	color: white;
+}
